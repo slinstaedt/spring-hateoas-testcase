@@ -29,7 +29,7 @@ class HelloControllerTest {
 				.andExpect(status().isOk()) //
 				.andExpect(jsonPath("$._links.a:world.href").value(endsWith("/hello?name=World")))
 				.andExpect(jsonPath("$._links.curies").exists())
-				//.andExpect(jsonPath("$._links.curies.length()").value(is(1)))
+				.andExpect(jsonPath("$._links.curies.length()").value(is(1)))
 				.andExpect(jsonPath("$._links.curies[0].name").value(is("a")))
 				.andExpect(jsonPath("$._links.curies[0].href").value(is("https://aaa/rels/{rel}")))
 				.andExpect(jsonPath("$._links.curies[0].templated").value(is(true)));
