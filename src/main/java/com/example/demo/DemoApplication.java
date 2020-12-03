@@ -25,6 +25,6 @@ public class DemoApplication {
 		return new DefaultCurieProvider(Map.of( //
 				"a", UriTemplate.of("https://aaa/rels/{rel}"), //
 				"b", UriTemplate.of("https://bbb/rels/{rel}") //
-		), null);
+		));
 	}
 }
